@@ -1,1 +1,60 @@
-/* developer styles go here */
+body {
+    background-color: rgb(245, 201, 147);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+    padding: 1rem;
+}
+
+.horizontal-content {
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+    /* scrollbar-width: none; */
+    height: calc(205.7px + 2rem);
+}
+
+/* .horizontal-content::-webkit-scrollbar {
+    background: transparent;
+    width: 0;
+} */
+
+.horizontal-content > div {
+    height: 187px;
+    background-color: rgb(255, 126, 169);
+    border-radius: 8px;
+    margin: 1rem 0.5rem;
+    flex: 0 0 330px;
+    transition: all 0.5s ease;
+}
+
+.horizontal-content > div:hover,
+.horizontal-content > div:active {
+    flex: 0 0 346.5px;
+    height: 205px;
+}
+
+.parallax-image {
+    background-image: url(../img/movie.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 500px;
+    background-attachment: fixed;
+}
+
+.parallax-image h2 {
+    color: beige;
+}
+
+@media screen and (min-wdith: 1024px) {
+    .horizontal-content {
+        scrollbar-width: 5px;
+    }
+
+    .horizontal-content::-webkit-scrollbar {
+        background: grey;
+        width: 5px;
+    }
+}
